@@ -12,7 +12,7 @@ const Login = () => {
     // e.preventDefault();
     if (name === 'prasanna'&& email==='dp@brandingdisplays.com' && password === 'pass') {
       // setIsAdmin(true);
-      navigate('http://localhost:5173/');
+      navigate('https://admin-branding-display.netlify.app');
     } else {
       alert('Incorrect credentials');
     }
