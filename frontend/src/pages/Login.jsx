@@ -6,14 +6,9 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [state, setState] = useState("Login");
 
-  // Get environment variables
-  const adminName = process.env.REACT_APP_ADMIN_NAME;
-  const adminEmail = process.env.REACT_APP_ADMIN_EMAIL;
-  const adminPassword = process.env.REACT_APP_ADMIN_PASSWORD;
-
   const login = async (e) => {
     e.preventDefault();  // Prevent form default submission behavior
-    if (name === adminName && email === adminEmail && password === adminPassword) {
+    if (name === 'prasanna' && email === 'dp@brandingdisplays.com' && password === 'pass') {
       // Redirect to the external admin page
       window.location.href = 'https://admin-branding-display.netlify.app';
     } else {
@@ -68,5 +63,3 @@ const Login = () => {
     </section>
   )
 }
-
-export default Login;
