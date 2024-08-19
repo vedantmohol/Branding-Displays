@@ -18,6 +18,12 @@ const Sidebar = () => {
             <span>Product List</span>
         </button>
         </Link>
+      <button
+  className="flexCenter gap-2 rounded-md bg-primary h-14 w-40 medium-16"
+  onClick={() => window.location.href = 'https://brandingdisplay.netlify.app/'}
+>
+  <span>Logout</span>
+</button>
     </div>
   )
 }
