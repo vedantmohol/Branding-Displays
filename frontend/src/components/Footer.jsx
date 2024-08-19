@@ -22,7 +22,7 @@ const Footer = () => {
               <FooterColumn>
                 <ul className="flex gap-4">
                   {SOCIALS.links.map((link)=>(
-                    <Link to="/" key={link}><img src={link} alt="socialIcon" height={22} width={22}/></Link>
+                    <Link to="https://www.linkedin.com/company/branding-displays/" key={link}><img src={link} alt="socialIcon" height={22} width={22}/></Link>
                   ))}
                 </ul>
               </FooterColumn>
