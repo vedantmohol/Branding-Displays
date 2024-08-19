@@ -7,9 +7,9 @@ const ListProduct = () => {
     const [homeProducts,setHomeProducts] = useState([]);
 
     const fetchInfo = async () =>{
-        await fetch('http://localhost:4000/aboutusproducts').then((res)=> res.json()).then((data)=>{setAboutusproducts(data)});
-        await fetch('http://localhost:4000/popularproducts').then((res)=> res.json()).then((data)=>{setPopularproducts(data)});
-        await fetch("http://localhost:4000/homeproducts").then((response)=> response.json()).then((data)=>setHomeProducts(data))
+        await fetch('https://branding-displays.onrender.com/aboutusproducts').then((res)=> res.json()).then((data)=>{setAboutusproducts(data)});
+        await fetch('https://branding-displays.onrender.com/popularproducts').then((res)=> res.json()).then((data)=>{setPopularproducts(data)});
+        await fetch("https://branding-displays.onrender.com/homeproducts").then((response)=> response.json()).then((data)=>setHomeProducts(data))
     }
 
     useEffect(()=>{
@@ -17,7 +17,7 @@ const ListProduct = () => {
     },[])
 
     const remove_product = async (id) =>{
-        await fetch('http://localhost:4000/removeproduct',{
+        await fetch('https://branding-displays.onrender.com/removeproduct',{
             method :'POST',
             headers:{
                 Accept: 'application/json',

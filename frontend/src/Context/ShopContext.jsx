@@ -9,7 +9,7 @@
 //     const contextValue = {all_products};
 
 //     // useEffect(()=>{
-//     //     fetch("http://localhost:4000/allproducts").then((response)=>response.json()).then((data)=>setAll_products(data));
+//     //     fetch("https://branding-displays.onrender.com/allproducts").then((response)=>response.json()).then((data)=>setAll_products(data));
 //     // },[])
 
 //     return(

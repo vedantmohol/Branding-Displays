@@ -6,7 +6,7 @@ const Popular = () => {
   const [homeProducts,setHomeProducts] = useState([]);
 
   useEffect(()=>{
-    fetch("http://localhost:4000/homeproducts").then((response)=> response.json()).then((data)=>setHomeProducts(data))
+    fetch("https://branding-displays.onrender.com/homeproducts").then((response)=> response.json()).then((data)=>setHomeProducts(data))
   },[])
 
   return (

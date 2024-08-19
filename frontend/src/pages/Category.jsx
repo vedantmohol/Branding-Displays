@@ -8,8 +8,8 @@ const Category = ({ category, banner }) => {
   const [popularProducts, setPopularProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/aboutusproducts").then((response) => response.json()).then((data) => setAboutusProducts(data))
-    fetch("http://localhost:4000/popularproducts").then((response) => response.json()).then((data) => setPopularProducts(data))
+    fetch("https://branding-displays.onrender.com/aboutusproducts").then((response) => response.json()).then((data) => setAboutusProducts(data))
+    fetch("https://branding-displays.onrender.com/popularproducts").then((response) => response.json()).then((data) => setPopularProducts(data))
 
   }, [])
 
