@@ -19,23 +19,32 @@ app.get("/",(req,res)=>{
     res.send("express App is Running")
 })
 
-//Image Storage Engine
+// Configure Multer storage
 const storage = multer.diskStorage({
-    destination:'./upload/images',
-    filename: (req,file,cb)=>{
-        return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, 'upload/images')); // Save images to 'upload/images'
+    },
+    filename: (req, file, cb) => {
+        cb(null, `${Date.now()}-${file.originalname}`);
     }
-})
+});
 
-const upload = multer({storage:storage})
-//creating upload endpoints for images
-app.use('/images',express.static('upload/images'))
-app.post("/upload",upload.single('product'),(req,res)=>{
+const upload = multer({ storage: storage });
+
+// Serve static files from the 'upload/images' directory
+app.use('/images', express.static(path.join(__dirname, 'upload/images')));
+
+// Handle file upload
+app.post("/upload", upload.single('product'), (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({ success: 0, message: "No file uploaded." });
+    }
+
     res.json({
         success: 1,
-        image_url:`../../../backend/upload/images/${req.file.filename}`
-    })
-})
+        image_url: `../../../backend/upload/images/${req.file.filename}` // Relative path for frontend
+    });
+});
 
 //Schema for creating product
 const Product = mongoose.model("Product",{
