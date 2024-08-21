@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom"
-import { MdCategory, MdContacts, MdHomeFilled, MdShop2 } from "react-icons/md"
+import { NavLink } from "react-router-dom";
+import { MdCategory, MdContacts, MdHomeFilled, MdShop2 } from "react-icons/md";
 
 const Navbar = ({ containerStyles, onItemClick }) => {
     return (
@@ -17,7 +17,7 @@ const Navbar = ({ containerStyles, onItemClick }) => {
                 <div className="flexCenter gap-x-1"><MdContacts/>Enquiry</div>
             </NavLink>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;
