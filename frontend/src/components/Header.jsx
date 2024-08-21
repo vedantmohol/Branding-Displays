@@ -25,7 +25,7 @@ const Header = () => {
                 {/* Navbar Mobile */}
                 <Navbar 
                     containerStyles={`${menuOpened ? "flex item-start flex-col gap-y-12 fixed top-20 right-8 p-12 bg-white rounded-3xl shadow-md w-64 medium-16 ring-1 ring-slate-900/5 transition-all duration-300" : "flex item-start flex-col gap-y-12 fixed top-20 p-12 bg-white rounded-3xl shadow-md w-64 medium-16 ring-1 ring-slate-900/5 transition-all duration-300 -right-[100%]"}`} 
-                    onClick={closeMenu} // Close menu on item click
+                    onItemClick={closeMenu} // Pass the closeMenu function to Navbar
                 />
                 {/* Buttons */}
                 <div className="flexBetween sm:gap-x-2 bold-16">
