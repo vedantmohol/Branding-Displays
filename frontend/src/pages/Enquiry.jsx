@@ -13,7 +13,7 @@ const Enquiry = () => {
     e.preventDefault();
     setResult('Sending....');
     const formData = new FormData(e.target);
-    formData.append("access_key", "2ee767f0-da2f-492a-bdab-fd378eac9f2a");
+    formData.append("access_key", "356e827b-3b2b-4f78-ad43-5d91345caa0d");
     // const enquiryData = {
     //   name,
     //   phone,
@@ -101,7 +101,7 @@ const Enquiry = () => {
     </div>
     <div className='block text-center m-4 sm:m-6'>
       <button
-        className='w-[150px] sm:w-[200px] py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors'
+        className='w-[150px] sm:w-[200px] py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors'
         type="submit"
       >
         Submit
